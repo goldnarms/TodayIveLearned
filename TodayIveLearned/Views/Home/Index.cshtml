@@ -1,0 +1,44 @@
+﻿<div data-ng-controller="addArtifactCtrl as ac">
+    <h3>Have you learned anything today?</h3>
+    <form id="addArtifact" novalidate>
+        <label>Today I've learned that/how to </label>
+        <input type="text" data-ng-model="ac.artifact.Title" value="" placeholder="ex. tie my shoelaces, Napoleons date of birth" /><br />
+        <label>from</label>
+        <ul>
+            <li data-ng-repeat="source in ac.sources">
+                <a data-ng-click="ac.setSource(source)" data-ng-bind="source.Name"></a>
+            </li>
+        </ul>
+        <a data-ng-click="ac.showOtherSources()">Other?</a>
+        <div data-ng-switch="" on="ac.source.Name">
+            <div data-ng-switch-when="Blog">
+                <label>Which blog did you learned this from?</label>
+                <input type="url" data-ng-model="ac.artifact.source.url" value="" placeholder="URL" />
+            </div>
+            <div data-ng-switch-when="Friend">
+                <label>What is your friend's name</label>
+                <input type="text" value="" data-ng-model="ac.artifact.source.name" placeholder="Name" />
+            </div>
+            <div data-ng-switch-when="other">
+                <input type="text" value="" data-ng-model="ac.artifact.source.name" placeholder="Source" />
+            </div>
+        </div>
+        <br />
+        <label>Suggested topics:</label>
+        <ul>
+            <li data-ng-repeat="topic in ac.topics">
+                <a data-ng-click="ac.setTopic(topic)" data-ng-bind="topic.Name"></a>[<span data-ng-bind="topic.Category.Name"></span>]
+            </li>
+        </ul>
+        <br />
+        <label>Suggested tags:</label>
+        <ul>
+            <li data-ng-repeat="tag in ac.suggestedTags">
+                <a data-ng-click="ac.setTag(tag)" data-ng-bind="tag.Name"></a>
+            </li>
+        </ul>
+        <br />
+        <button data-ng-click="ac.addArtifact(ac.artifact)">Add artifact</button>
+
+    </form>
+</div>
