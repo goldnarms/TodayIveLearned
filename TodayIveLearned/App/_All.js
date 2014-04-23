@@ -1,1 +1,10 @@
+/// <reference path="../Scripts/typings/angularjs/angular-resource.d.ts" />
+/// <reference path="../Scripts/typings/angularjs/angular-route.d.ts" />
+/// <reference path="../Scripts/typings/angularjs/angular.d.ts" />
+/// <reference path="../Models/Artifact.cs.d.ts" />
+/// <reference path="../Models/Category.cs.d.ts" />
+/// <reference path="../Models/Source.cs.d.ts" />
+/// <reference path="../Models/Tag.cs.d.ts" />
+/// <reference path="../Models/Topic.cs.d.ts" />
+/// <reference path="../Models/Trigger.cs.d.ts" />
 //# sourceMappingURL=_all.js.map

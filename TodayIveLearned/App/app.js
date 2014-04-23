@@ -8,8 +8,7 @@ var TIL;
     var app = angular.module("tilApp", ["TIL.controllers", "ngRoute"]);
 
     app.config([
-        "$routeProvider",
-        function ($routeProvider) {
+        "$routeProvider", function ($routeProvider) {
             $routeProvider.when("/", {
                 templateUrl: "Home/Index",
                 controller: "addArtifactCtrl as ac"
