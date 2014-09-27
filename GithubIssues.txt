@@ -1,0 +1,16 @@
+Today Ive learned
+
+Issues
+
+Register an artifact
+Create a new category
+Create a new subcategory
+Register an user
+Delete an account
+Calculate an profiency score based on precentage of completed artifacts within the category
+Share on facebook
+Share on Twitter
+Invite friends
+Get badges
+List out categories
+Dashboard for user
